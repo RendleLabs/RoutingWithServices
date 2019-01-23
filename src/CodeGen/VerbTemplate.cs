@@ -11,17 +11,18 @@ namespace CodeGen
         public const string MethodEnd =
             @"                return handler(request, response, routeData, {Dependencies});
             });
-        }";
+        }
+";
 
         public const string GetRequiredService = "                var d{Number} = request.HttpContext.RequestServices.GetRequiredService<T{Number}>();";
 
         public const string FileStart = @"using System;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.DependencyInjection;
 
-// ReSharper disable once CheckNamespace
-namespace Microsoft.AspNetCore.Routing
+namespace RendleLabs.AspNetCore.RoutingWithServices
 {
     public static class RouteBuilderMapVerbExtensions
     {";

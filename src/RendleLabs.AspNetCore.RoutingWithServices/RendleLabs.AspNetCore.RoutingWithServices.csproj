@@ -12,7 +12,7 @@
     <Copyright>Copyright (C) 2019 RendleLabs.</Copyright>
     <PackageTags>dependency-injection aspnetcore routing</PackageTags>
     <PackageProjectUrl>https://github.com/RendleLabs/RoutingWithServices</PackageProjectUrl>
-    <PackageLicenseUrl>https://github.com/RendleLabs/RoutingWithServices/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageLicense>https://github.com/RendleLabs/RoutingWithServices/blob/master/LICENSE</PackageLicense>
     <RepositoryUrl>https://github.com/RendleLabs/RoutingWithServices</RepositoryUrl>
   </PropertyGroup>
 

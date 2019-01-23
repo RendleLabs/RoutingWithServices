@@ -14,8 +14,7 @@ namespace CodeGen
         {
             if (args.Length != 1 || !int.TryParse(args[0], out int maxArgs))
             {
-                Console.Error.WriteLine("Usage: dotnet run - [maxArgs]");
-                return;
+                maxArgs = 8;
             }
 
             await GenerateVerbMethods(maxArgs);

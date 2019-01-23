@@ -1,10 +1,10 @@
 using System;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.DependencyInjection;
 
-// ReSharper disable once CheckNamespace
-namespace Microsoft.AspNetCore.Routing
+namespace RendleLabs.AspNetCore.RoutingWithServices
 {
     public static class RouteBuilderMapVerbExtensions
     {
@@ -16,6 +16,7 @@ namespace Microsoft.AspNetCore.Routing
                 return handler(request, response, routeData, d1);
             });
         }
+
         public static IRouteBuilder MapVerb<T1, T2>(this IRouteBuilder builder, string verb, string template, Func<HttpRequest, HttpResponse, RouteData, T1, T2, Task> handler)
         {
             return builder.MapVerb(verb, template, (request, response, routeData) =>
@@ -25,6 +26,7 @@ namespace Microsoft.AspNetCore.Routing
                 return handler(request, response, routeData, d1, d2);
             });
         }
+
         public static IRouteBuilder MapVerb<T1, T2, T3>(this IRouteBuilder builder, string verb, string template, Func<HttpRequest, HttpResponse, RouteData, T1, T2, T3, Task> handler)
         {
             return builder.MapVerb(verb, template, (request, response, routeData) =>
@@ -35,6 +37,7 @@ namespace Microsoft.AspNetCore.Routing
                 return handler(request, response, routeData, d1, d2, d3);
             });
         }
+
         public static IRouteBuilder MapVerb<T1, T2, T3, T4>(this IRouteBuilder builder, string verb, string template, Func<HttpRequest, HttpResponse, RouteData, T1, T2, T3, T4, Task> handler)
         {
             return builder.MapVerb(verb, template, (request, response, routeData) =>
@@ -46,6 +49,7 @@ namespace Microsoft.AspNetCore.Routing
                 return handler(request, response, routeData, d1, d2, d3, d4);
             });
         }
+
         public static IRouteBuilder MapVerb<T1, T2, T3, T4, T5>(this IRouteBuilder builder, string verb, string template, Func<HttpRequest, HttpResponse, RouteData, T1, T2, T3, T4, T5, Task> handler)
         {
             return builder.MapVerb(verb, template, (request, response, routeData) =>
@@ -58,6 +62,7 @@ namespace Microsoft.AspNetCore.Routing
                 return handler(request, response, routeData, d1, d2, d3, d4, d5);
             });
         }
+
         public static IRouteBuilder MapVerb<T1, T2, T3, T4, T5, T6>(this IRouteBuilder builder, string verb, string template, Func<HttpRequest, HttpResponse, RouteData, T1, T2, T3, T4, T5, T6, Task> handler)
         {
             return builder.MapVerb(verb, template, (request, response, routeData) =>
@@ -71,6 +76,7 @@ namespace Microsoft.AspNetCore.Routing
                 return handler(request, response, routeData, d1, d2, d3, d4, d5, d6);
             });
         }
+
         public static IRouteBuilder MapVerb<T1, T2, T3, T4, T5, T6, T7>(this IRouteBuilder builder, string verb, string template, Func<HttpRequest, HttpResponse, RouteData, T1, T2, T3, T4, T5, T6, T7, Task> handler)
         {
             return builder.MapVerb(verb, template, (request, response, routeData) =>
@@ -85,6 +91,7 @@ namespace Microsoft.AspNetCore.Routing
                 return handler(request, response, routeData, d1, d2, d3, d4, d5, d6, d7);
             });
         }
+
         public static IRouteBuilder MapVerb<T1, T2, T3, T4, T5, T6, T7, T8>(this IRouteBuilder builder, string verb, string template, Func<HttpRequest, HttpResponse, RouteData, T1, T2, T3, T4, T5, T6, T7, T8, Task> handler)
         {
             return builder.MapVerb(verb, template, (request, response, routeData) =>
@@ -100,5 +107,6 @@ namespace Microsoft.AspNetCore.Routing
                 return handler(request, response, routeData, d1, d2, d3, d4, d5, d6, d7, d8);
             });
         }
+
     }
 }

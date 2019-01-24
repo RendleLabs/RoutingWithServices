@@ -3,7 +3,8 @@ namespace CodeGen
     static class VerbTemplate
     {
         public const string MethodStart =
-            @"        public static IRouteBuilder MapVerb<{TypeParams}>(this IRouteBuilder builder, string verb, string template, Func<HttpRequest, HttpResponse, RouteData, {TypeParams}, Task> handler)
+            @"        {DocComments}
+        public static IRouteBuilder MapVerb<{TypeParams}>(this IRouteBuilder builder, string verb, string template, Func<HttpRequest, HttpResponse, RouteData, {TypeParams}, Task> handler)
         {
             return builder.MapVerb(verb, template, (request, response, routeData) =>
             {";
@@ -29,5 +30,18 @@ namespace RendleLabs.AspNetCore.RoutingWithServices
 
         public const string FileEnd = @"    }
 }";
+        
+        public const string DocComments =
+            @"/// <summary>
+        /// Adds a route to the <see cref=""IRouteBuilder""/> that only matches HTTP PATCH requests for the given <c>verb</c>, <c>template</c> and <c>handler</c>.
+        /// </summary>
+        /// <param name=""builder"">The <see cref=""IRouteBuilder""/></param>.
+        /// <param name=""verb"">The HTTP verb allowed by the route.</param>
+        /// <param name=""template"">The route template.</param>
+        /// <param name=""handler"">The route handler.</param>
+{TypeParams}
+        /// <returns>The <see cref=""IRouteBuilder""/>.</returns>";
+
+        public const string DocCommentsTypeParam = @"        /// <typeparam name=""T{n}"">A service object type to be resolved.</typeparam>";
     }
 }

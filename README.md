@@ -1,5 +1,10 @@
 # RoutingWithServices
-Extension methods for Dependency Injection in UseRouter
+
+![NuGet Package](https://img.shields.io/nuget/v/RendleLabs.AspNetCore.RoutingWithServices.svg)
+
+If you use the Routing API in ASP.NET Core (e.g. `builder.MapGet("/thing/id", ...)`) and you wish it would
+do dependency injection to the handlers, this package is for you.
+
 
 # Usage
 
@@ -31,4 +36,4 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 }
 ```
 
-There are overloads up to eight type parameters for `MapGet`, `MapPost`, `MapPut`, `MapDelete` and `MapVerb`.
+There are overloads up to eight type parameters for `MapGet`, `MapPost`, `MapPut`, `MapDelete`, `MapPatch`, `MapHead` and `MapVerb`.

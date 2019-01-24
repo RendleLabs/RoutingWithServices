@@ -2,18 +2,20 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Version>2.0.0</Version>
+    <Version>2.0.1</Version>
     <PackageId>RendleLabs.AspNetCore.RoutingWithServices</PackageId>
     <Title>RendleLabs.AspNetCore.RoutingWithServices</Title>
     <Authors>Mark Rendle</Authors>
     <Description>Extension methods for Dependency Injection in UseRouter.</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <PackageReleaseNotes>First release</PackageReleaseNotes>
+    <PackageReleaseNotes>Strong-named.</PackageReleaseNotes>
     <Copyright>Copyright (C) 2019 RendleLabs.</Copyright>
     <PackageTags>dependency-injection aspnetcore routing</PackageTags>
     <PackageProjectUrl>https://github.com/RendleLabs/RoutingWithServices</PackageProjectUrl>
     <PackageLicenseUrl>https://github.com/RendleLabs/RoutingWithServices/blob/master/LICENSE</PackageLicenseUrl>
     <RepositoryUrl>https://github.com/RendleLabs/RoutingWithServices</RepositoryUrl>
+    <AssemblyOriginatorKeyFile>C:\Labs\RendleLabsKey\rendlelabs.snk</AssemblyOriginatorKeyFile>
+    <SignAssembly>true</SignAssembly>
   </PropertyGroup>
 
   <ItemGroup>

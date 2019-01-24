@@ -1,6 +1,8 @@
 # RoutingWithServices
 
-![NuGet Package](https://img.shields.io/nuget/v/RendleLabs.AspNetCore.RoutingWithServices.svg)
+<a href="https://nuget.org/packages/RendleLabs.AspNetCore.RoutingWithServices" rel="external">
+    <img src="https://img.shields.io/nuget/v/RendleLabs.AspNetCore.RoutingWithServices.svg">
+</a>
 
 If you use the Routing API in ASP.NET Core (e.g. `builder.MapGet("/thing/id", ...)`) and you wish it would
 do dependency injection to the handlers, this package is for you.
